@@ -1,0 +1,89 @@
+[
+    { "inputs": [], "stateMutability": "nonpayable", "type": "constructor" },
+    {
+        "anonymous": false,
+        "inputs": [
+            { "indexed": true, "internalType": "address", "name": "previousOwner", "type": "address" },
+            { "indexed": true, "internalType": "address", "name": "newOwner", "type": "address" }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            { "internalType": "address", "name": "_token", "type": "address" },
+            { "internalType": "bool", "name": "_flag", "type": "bool" }
+        ],
+        "name": "approveToken",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            { "internalType": "address", "name": "_token", "type": "address" },
+            { "internalType": "string", "name": "_logo", "type": "string" },
+            { "internalType": "uint256", "name": "_hardcap", "type": "uint256" },
+            { "internalType": "uint256", "name": "_softcap", "type": "uint256" },
+            { "internalType": "uint256", "name": "_maxInvest", "type": "uint256" },
+            { "internalType": "uint256", "name": "_minInvest", "type": "uint256" },
+            { "internalType": "uint256", "name": "_startTime", "type": "uint256" },
+            { "internalType": "uint256", "name": "_endTime", "type": "uint256" },
+            { "internalType": "uint256", "name": "_price", "type": "uint256" },
+            { "internalType": "bool", "name": "_isPublic", "type": "bool" }
+        ],
+        "name": "deploy",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [{ "internalType": "address", "name": "_owner", "type": "address" }],
+        "name": "getPools",
+        "outputs": [{ "internalType": "address[]", "name": "", "type": "address[]" }],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "poolCount",
+        "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+        "name": "poolMap",
+        "outputs": [
+            { "internalType": "address", "name": "pool", "type": "address" },
+            { "internalType": "address", "name": "token", "type": "address" },
+            { "internalType": "string", "name": "logo", "type": "string" },
+            { "internalType": "address", "name": "owner", "type": "address" },
+            { "internalType": "uint256", "name": "createdAt", "type": "uint256" }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    { "inputs": [], "name": "renounceOwnership", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
+    {
+        "inputs": [{ "internalType": "address", "name": "newOwner", "type": "address" }],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+        "name": "whitelist",
+        "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]
